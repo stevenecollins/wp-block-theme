@@ -1,0 +1,30 @@
+/* Sticky Header Styles - Optimized */
+.has-sticky-header {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	background-color: #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease-in-out;
+	width: 100%;
+}
+
+/* Target WordPress template part header - this is the most common format */
+header.wp-block-template-part.has-sticky-header {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+}
+
+/* Adjust for WordPress admin bar when logged in */
+.admin-bar .has-sticky-header,
+.admin-bar header.wp-block-template-part.has-sticky-header {
+	top: 32px !important; /* Height of the admin bar */
+}
+
+@media screen and (max-width: 782px) {
+	.admin-bar .has-sticky-header,
+	.admin-bar header.wp-block-template-part.has-sticky-header {
+		top: 46px !important; /* Height of the admin bar on mobile */
+	}
+}
