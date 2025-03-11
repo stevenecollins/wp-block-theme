@@ -74,7 +74,7 @@
                       null,
                       createElement(
                           PanelBody,
-                          { title: "Sticky Header Settings", initialOpen: true },
+                          { title: "Header Options", initialOpen: true },
                           createElement(ToggleControl, {
                               label: "Enable Sticky Header",
                               checked: !!attributes.isSticky,
@@ -90,7 +90,7 @@
                                       applyStickyHeaderClass(value);
                                   }, 200);
                               },
-                              help: attributes.isSticky ? 'Header will stick to the top when scrolling.' : 'Header will scroll with the page.'
+                              help: attributes.isSticky ? 'The header will stick to the top when scrolling.' : 'The header will scroll with the page.'
                           })
                       )
                   )

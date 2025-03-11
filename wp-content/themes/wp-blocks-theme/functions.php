@@ -1,7 +1,8 @@
 <?php
 
 // Add a server-side filter to ensure the sticky header class persists
-function add_sticky_header_class_to_header($block_content, $block) {
+function add_sticky_header_class_to_header($block_content, $block)
+{
   // Only target header template parts
   if ($block['blockName'] === 'core/template-part' && isset($block['attrs']['slug']) && $block['attrs']['slug'] === 'header') {
     // Check if sticky header is enabled for this header
@@ -16,12 +17,12 @@ function add_sticky_header_class_to_header($block_content, $block) {
       } else if (strpos($block_content, '<header') !== false) {
         $block_content = str_replace('<header', '<header class="has-sticky-header"', $block_content);
       }
-      
+
       // Also add the data attribute
       $block_content = str_replace('<header', '<header data-sticky-header="true"', $block_content);
     }
   }
-  
+
   return $block_content;
 }
 add_filter('render_block', 'add_sticky_header_class_to_header', 10, 2);
@@ -35,19 +36,17 @@ function my_plugin_enqueue_block_editor_assets()
     array('wp-blocks', 'wp-element', 'wp-block-editor', 'wp-components', 'wp-hooks', 'wp-compose', 'wp-data'),
     filemtime(get_template_directory() . '/assets/js/my-sticky-header.js')
   );
-  
-  // We no longer need sticky-header-direct.js since we have a server-side filter
-  // and the main editor script already handles the toggle functionality
 }
 add_action('enqueue_block_editor_assets', 'my_plugin_enqueue_block_editor_assets');
 
 // Add frontend sticky header functionality
-function my_plugin_enqueue_frontend_assets() {
+function my_plugin_enqueue_frontend_assets()
+{
   // Only add the CSS and JS for the sticky header effect on frontend
   if (is_admin()) {
     return;
   }
-  
+
   // Enqueue the CSS for sticky header
   wp_enqueue_style(
     'my-sticky-header-styles',
@@ -55,7 +54,7 @@ function my_plugin_enqueue_frontend_assets() {
     array(),
     filemtime(get_template_directory() . '/assets/css/sticky-header.css')
   );
-  
+
   // Enqueue the frontend JavaScript for sticky header
   wp_enqueue_script(
     'my-sticky-header-frontend',
@@ -64,8 +63,5 @@ function my_plugin_enqueue_frontend_assets() {
     filemtime(get_template_directory() . '/assets/js/sticky-header-frontend.js'),
     true  // Load in footer
   );
-  
-  // We don't need to load sticky-header-direct.js twice
-  // The frontend script handles this functionality
 }
 add_action('wp_enqueue_scripts', 'my_plugin_enqueue_frontend_assets');
