@@ -1,0 +1,1 @@
+/Users/steven/Local Sites/wp-block-theme/app/public/wp-content/plugins/query-monitor/wp-content/db.php
