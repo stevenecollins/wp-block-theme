@@ -3,18 +3,141 @@
 	"settings": {
 		"appearanceTools": true,
 		"layout": {
-			"contentSize": "620px",
-			"wideSize": "1000px"
+			"contentSize": "1140px",
+			"wideSize": "1360px"
 		},
-		"spacing": {
-			"units": [ "%", "px", "em", "rem", "vh", "vw" ]
+		"color": {
+			"palette": [
+			]
 		},
-		"typography": {
+"spacing": {
+			"units": ["px", "em", "rem", "%"],
+			"spacingSizes": [
+				{
+					"slug": "xx-small",
+					"size": "0.5rem",
+					"name": "XX Small"
+				},
+				{
+					"slug": "x-small",
+					"size": "1rem",
+					"name": "X Small"
+				},
+				{
+					"slug": "small",
+					"size": "1.5rem",
+					"name": "Small"
+				},
+				{
+					"slug": "medium",
+					"size": "2rem",
+					"name": "Medium"
+				},
+				{
+					"slug": "large",
+					"size": "3rem",
+					"name": "Large"
+				},
+				{
+					"slug": "x-large",
+					"size": "4rem",
+					"name": "X Large"
+				}
+			]
+		},
+"typography": {
 			"fontFamilies": [
 				{
-					"fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
+					"fontFamily": "Nunito, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+					"name": "Nunito",
+					"slug": "nunito",
+					"fontFace": [
+						{
+							"fontFamily": "Nunito",
+							"fontWeight": "200",
+							"fontStyle": "normal",
+							"src": ["file:./assets/fonts/nunito/Nunito-ExtraLight.ttf"]
+						},
+						{
+							"fontFamily": "Nunito",
+							"fontWeight": "300",
+							"fontStyle": "normal",
+							"src": ["file:./assets/fonts/nunito/Nunito-Light.ttf"]
+						},
+						{
+							"fontFamily": "Nunito",
+							"fontWeight": "400",
+							"fontStyle": "normal",
+							"src": ["file:./assets/fonts/nunito/Nunito-Regular.ttf"]
+						},
+						{
+							"fontFamily": "Nunito",
+							"fontWeight": "500",
+							"fontStyle": "normal",
+							"src": ["file:./assets/fonts/nunito/Nunito-Regular.ttf"]
+						},
+						{
+							"fontFamily": "Nunito",
+							"fontWeight": "600",
+							"fontStyle": "normal",
+							"src": ["file:./assets/fonts/nunito/Nunito-Medium.ttf"]
+						},
+						{
+							"fontFamily": "Nunito",
+							"fontWeight": "700",
+							"fontStyle": "normal",
+							"src": ["file:./assets/fonts/nunito/Nunito-SemiBold.ttf"]
+						},
+						{
+							"fontFamily": "Nunito",
+							"fontWeight": "800",
+							"fontStyle": "normal",
+							"src": ["file:./assets/fonts/nunito/Nunito-Bold.ttf"]
+						},
+						{
+							"fontFamily": "Nunito",
+							"fontWeight": "900",
+							"fontStyle": "normal",
+							"src": ["file:./assets/fonts/nunito/Nunito-ExtraBold.ttf"]
+						}
+					]
+				},
+				{
+					"fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
 					"name": "System Font",
-					"slug": "system-font"
+					"slug": "system"
+				}
+			],
+			"fontSizes": [
+				{
+					"slug": "small",
+					"size": "0.875rem",
+					"name": "Small"
+				},
+				{
+					"slug": "base",
+					"size": "1rem",
+					"name": "Base"
+				},
+				{
+					"slug": "medium",
+					"size": "1.5rem",
+					"name": "Medium"
+				},
+				{
+					"slug": "large",
+					"size": "1.75rem",
+					"name": "Large"
+				},
+				{
+					"slug": "x-large",
+					"size": "2rem",
+					"name": "Extra Large"
+				},
+				{
+					"slug": "xx-large",
+					"size": "2.75rem",
+					"name": "Extra Extra Large"
 				}
 			]
 		},
